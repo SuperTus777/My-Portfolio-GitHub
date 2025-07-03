@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ของ กิตติคุณ วรนาม</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Sarabun & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Sarabun', 'Inter', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+            color: #d1d5db; /* text-gray-300 */
+        }
+        .glassmorphism {
+            background: rgba(17, 24, 39, 0.7); /* bg-gray-900 with opacity */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .skill-card {
+            background-color: #1f2937; /* bg-gray-800 */
+            border: 1px solid #374151; /* border-gray-700 */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .education-card {
+             background-color: #1f2937; /* bg-gray-800 */
+             border: 1px solid #374151; /* border-gray-700 */
+             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 glassmorphism">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Portfolio</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-300 hover:text-sky-400 transition duration-300">หน้าแรก</a>
+                <a href="#about" class="text-gray-300 hover:text-sky-400 transition duration-300">เกี่ยวกับฉัน</a>
+                <a href="#education" class="text-gray-300 hover:text-sky-400 transition duration-300">ประวัติการศึกษา</a>
+                <a href="#experience" class="text-gray-300 hover:text-sky-400 transition duration-300">ประสบการณ์</a>
+                <a href="#skills-showcase" class="text-gray-300 hover:text-sky-400 transition duration-300">ผลงานเชิงลึก</a>
+                <a href="#contact" class="text-gray-300 hover:text-sky-400 transition duration-300">ติดต่อ</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800">
+            <a href="#home" class="block py-3 px-6 text-sm text-gray-300 hover:bg-gray-700">หน้าแรก</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-gray-300 hover:bg-gray-700">เกี่ยวกับฉัน</a>
+            <a href="#education" class="block py-3 px-6 text-sm text-gray-300 hover:bg-gray-700">ประวัติการศึกษา</a>
+            <a href="#experience" class="block py-3 px-6 text-sm text-gray-300 hover:bg-gray-700">ประสบการณ์</a>
+            <a href="#skills-showcase" class="block py-3 px-6 text-sm text-gray-300 hover:bg-gray-700">ผลงานเชิงลึก</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-gray-300 hover:bg-gray-700">ติดต่อ</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Home / Hero -->
+        <section id="home" class="min-h-screen flex items-center bg-gray-900 pt-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                    สวัสดี, ผมชื่อ <span class="gradient-text">กิตติคุณ วรนาม</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-8">
+                    วิศวกรรมการผลิตอัตโนมัติและหุ่นยนต์ | มีประสบการณ์ฝึกงาน 5 เดือน
+                </p>
+                <a href="#skills-showcase" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                    ดูทักษะและผลงาน
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: About Me & Skills -->
+        <section id="about" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">เกี่ยวกับฉันและทักษะ</h2>
+                <div class="flex flex-col lg:flex-row items-center gap-12 mb-12">
+                    <div class="lg:w-1/3 flex-shrink-0">
+                        <img src="B6310134.jpg" alt="รูปโปรไฟล์ของคุณกิตติคุณ" class="rounded-2xl shadow-lg mx-auto w-60 h-72 md:w-64 md:h-80 object-cover border-4 border-gray-700" onerror="this.onerror=null;this.src='https://placehold.co/400x500/1f2937/d1d5db?text=Kittikun+W.';">
+                    </div>
+                    <div class="lg:w-2/3">
+                        <p class="text-lg text-gray-300 mb-8">
+                            บัณฑิตจบใหม่จากมหาวิทยาลัยเทคโนโลยีสุรนารี คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมการผลิตอัตโนมัติและหุ่นยนต์ มีความหลงใหลในการออกแบบและพัฒนาเทคโนโลยีอัตโนมัติ มีความกระตือรือร้นที่จะเรียนรู้สิ่งใหม่ๆ และนำความรู้ที่ได้จากการเรียนและประสบการณ์ฝึกงานมาประยุกต์ใช้เพื่อสร้างสรรค์ผลงานที่มีคุณภาพ กำลังมองหาโอกาสในการเริ่มต้นเส้นทางอาชีพในตำแหน่งวิศวกร เพื่อเติบโตไปพร้อมกับองค์กร
+                        </p>
+                        <div class="text-center lg:text-left">
+                            <a href="Resume.pdf" download="Resume.pdf" class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">
+                                <i class="fas fa-download mr-2"></i> ดาวน์โหลด Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-sky-400 mb-4 border-b-2 border-sky-400 pb-2">Hard Skills</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold text-white">CAD Software</h4>
+                                <p class="text-gray-400 pl-4">SolidWorks (Advanced), AutoCAD (Intermediate)</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">การออกแบบ (Design)</h4>
+                                <p class="text-gray-400 pl-4">Sheet Metal Design, Product Design, Jig & Fixture Design</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">การผลิต (Production)</h4>
+                                <p class="text-gray-400 pl-4">Process Improvement, Lean Manufacturing (Basic), Quality Control (Basic), CNC Machining (Basic understanding)</p>
+                            </div>
+                             <div>
+                                <h4 class="font-bold text-white">โปรแกรมอื่นๆ (Other Software)</h4>
+                                <p class="text-gray-400 pl-4">Microsoft Office Suite (Word, Excel, PowerPoint)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-purple-400 mb-4 border-b-2 border-purple-400 pb-2">Soft Skills</h3>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong>การแก้ปัญหา (Problem Solving):</strong> พัฒนาจากการวิเคราะห์และหาทางออกสำหรับปัญหาในสายการผลิต</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong>การทำงานเป็นทีม (Teamwork):</strong> ทำงานร่วมกับวิศวกรและพนักงานฝ่ายผลิตอย่างมีประสิทธิภาพ</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong>การสื่อสาร (Communication):</strong> นำเสนอข้อมูลและประสานงานกับผู้บังคับบัญชาและทีม</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong>ความละเอียดรอบคอบ (Attention to Detail):</strong> ในการวิเคราะห์กระบวนการและจัดทำเอกสาร</span></li>
+                            <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong>ความรับผิดชอบ (Responsibility):</strong> รับผิดชอบงานที่ได้รับมอบหมายจนสำเร็จลุล่วง</span></li>
+                             <li class="flex items-start"><i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i><span><strong>การปรับตัว (Adaptability):</strong> ปรับตัวเข้ากับสภาพแวดล้อมการทำงานจริงและเรียนรู้สิ่งใหม่ๆ ได้เร็ว</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Education (New) -->
+        <section id="education" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">ประวัติการศึกษา</h2>
+                <div class="max-w-4xl mx-auto space-y-12">
+                    <!-- University Entry -->
+                    <div class="education-card p-6 rounded-lg flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+                        <div class="flex-shrink-0 flex flex-row sm:flex-col gap-4">
+                            <img src="LOGO_SUT.jpg" alt="โลโก้มหาวิทยาลัยเทคโนโลยีสุรนารี" class="w-24 h-24 sm:w-32 sm:h-32 object-contain rounded-lg bg-white p-1">
+                            <img src="LOGO_MAE.jpg" alt="ตราสาขาวิศวกรรมการผลิตอัตโนมัติและหุ่นยนต์" class="w-24 h-24 sm:w-32 sm:h-32 object-contain rounded-lg bg-white p-1">
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <h3 class="text-2xl font-bold text-white">ปริญญาตรี - ปีที่สำเร็จการศึกษา 2567</h3>
+                            <p class="text-sky-400 font-semibold text-lg my-1">มหาวิทยาลัยเทคโนโลยีสุรนารี</p>
+                            <p class="text-gray-300"><strong>คณะ:</strong> วิศวกรรมศาสตร์</p>
+                            <p class="text-gray-300"><strong>สาขาวิชา:</strong> วิศวกรรมการผลิตอัตโนมัติและหุ่นยนต์</p>
+                            <p class="text-gray-300"><strong>ชื่อปริญญา:</strong> วิศวกรรมศาสตรบัณฑิต (วิศวกรรมการผลิตอัตโนมัติและหุ่นยนต์)</p>
+                            <p class="text-gray-300"><strong>เกรดเฉลี่ยสะสม:</strong> 3.25</p>
+                        </div>
+                    </div>
+
+                    <!-- High School Entry -->
+                    <div class="education-card p-6 rounded-lg flex flex-col sm:flex-row items-center gap-6 sm:gap-8">
+                        <div class="flex-shrink-0">
+                            <img src="LOGO_SW.jpg" alt="โลโก้โรงเรียนศึกษานารีวิทยา" class="w-24 h-24 sm:w-32 sm:h-32 object-contain rounded-lg bg-white p-1">
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <h3 class="text-2xl font-bold text-white">มัธยมศึกษาตอนปลาย - ปีที่สำเร็จการศึกษา 2563</h3>
+                            <p class="text-sky-400 font-semibold text-lg my-1">โรงเรียนศึกษานารีวิทยา</p>
+                            <p class="text-gray-300"><strong>แผนการเรียน:</strong> โครงการส่งเสริมความเป็นเลิศด้านวิทยาศาสตร์-คณิตศาสตร์ (Sci-Math Gifted)</p>
+                            <p class="text-gray-300"><strong>เกรดเฉลี่ยสะสม:</strong> 3.36</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Experience -->
+        <section id="experience" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">ประสบการณ์ฝึกงาน</h2>
+                <div class="bg-gray-900 rounded-lg p-8 shadow-lg relative border border-gray-700">
+                    <div class="absolute top-0 left-4 -translate-y-1/2 bg-sky-500 text-white text-sm font-bold px-4 py-1 rounded-full">ก.ค. - พ.ย. 2566</div>
+                    <h3 class="text-2xl font-bold text-white mb-2">วิศวกรฝ่ายผลิต (ฝึกงาน), บริษัท อาซีฟา จำกัด (มหาชน)</h3>
+                    <p class="text-gray-400 mb-6">5 หมู่ 1 ถ.พระราม 2 ต.คอกกระบือ อ.เมืองสมุทรสาคร จ.สมุทรสาคร 74000</p>
+                    
+                    <h4 class="text-xl font-semibold text-white mb-3">ผลงานและความรับผิดชอบหลัก:</h4>
+                    <ul class="list-disc list-inside text-gray-300 space-y-2 mb-6">
+                        <li>วิเคราะห์และปรับปรุงกระบวนการผลิตตู้สวิตช์บอร์ดไฟฟ้าโดยใช้วัตถุดิบหลักคือ Sheet Metal</li>
+                        <li>ศึกษาและจัดทำเอกสารแนะนำการปฏิบัติงาน (Work Instruction) สำหรับกระบวนการผลิต</li>
+                        <li>ประสานงานกับทีมงานฝ่ายผลิตเพื่อเก็บข้อมูล, วิเคราะห์ปัญหา และนำเสนอแนวทางแก้ไข</li>
+                        <li>พัฒนาทักษะการแก้ปัญหาเฉพาะหน้าและการทำงานภายใต้แรงกดดันในสภาพแวดล้อมโรงงานจริง</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Skills Showcase -->
+        <section id="skills-showcase" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">ผลงานเชิงลึก</h2>
+                <div class="mb-16">
+                    <h3 class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 text-center">Hard Skills Showcase</h3>
+                    <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="skill-card rounded-lg p-6 flex flex-col">
+                            <h4 class="text-xl font-bold text-white mb-4">โครงการปรับปรุงประสิทธิภาพห้องอบสีในสถานีพ่นสี</h4>
+                            <p class="text-gray-400 mb-4 flex-grow">
+                                ในการฝึกงานที่อาซีฟา ผมได้รับโจทย์ให้แก้ปัญหาคุณภาพชิ้นงาน Sheet Metal ที่เสียหายหลังการอบสี ซึ่งเกิดจากตะแกรงระบายลมร้อนชำรุด แทนที่จะสั่งซื้อใหม่ในราคา 125,720 บาท ผมได้เสนอแนวคิดออกแบบและผลิตตะแกรงขึ้นเองโดยใช้วัสดุ Sheet Metal ที่มีในบริษัท ผลลัพธ์คือสามารถลดต้นทุนได้ถึง 103,105.84 บาท (82.02%) และยังได้เรียนรู้การออกแบบ JIG & Fixture เพื่อช่วยในการเชื่อมประกอบชิ้นงานให้แม่นยำยิ่งขึ้น
+                            </p>
+                            <div class="grid grid-cols-2 gap-4 mt-auto">
+                                <img src="Assembly Grill.png" alt="โมเดล 3 มิติของ Jig" class="rounded-lg w-full h-auto object-cover">
+				<img src="Team.jpg" alt="โมเดล 3 มิติของ Jig" class="rounded-lg w-full h-auto object-cover"><p>
+                                <img src="Grill Real.jpg" alt="แบบ 2 มิติ" class="rounded-lg w-full h-auto object-cover"></p>
+				<img src="JIG.jpg" alt="โมเดล 3 มิติของ Jig" class="rounded-lg w-full h-auto object-cover">
+                            </div>
+                        </div>
+                        <div class="skill-card rounded-lg p-6 flex flex-col">
+                            <h4 class="text-xl font-bold text-white mb-4">โครงการออกแบบเครื่องตรวจสอบและนับจำนวนด้ามไม้กอล์ฟ</h4>
+                            <p class="text-gray-400 mb-4 flex-grow">
+                                ในโปรเจกต์วิทยานิพนธ์ ผมได้พัฒนาเครื่องตรวจสอบและนับจำนวนด้ามไม้กอล์ฟอัตโนมัติเพื่อลดการใช้พนักงาน 4 คน เครื่องต้นแบบสามารถตรวจสอบและจัดเรียงชิ้นงานได้แม่นยำ 100% แต่ยังพบข้อจำกัดด้านความเร็วในการตรวจสอบที่ช้ากว่าคน 0.6 วินาที และความแม่นยำในการนับที่ยังต้องปรับปรุงเนื่องจาก Sensor ไวต่อสีของชิ้นงาน ประสบการณ์นี้ทำให้ได้ฝึกฝนทักษะการออกแบบ การแก้ปัญหา และการประเมินผลอย่างเป็นระบบ
+                            </p>
+			    <div class="grid grid-cols-2 gap-4 mt-auto">
+                                <img src="MC.png" alt="โมเดล 3 มิติของ Jig" class="rounded-lg w-full h-auto object-cover">
+				<img src="3D MC.png" alt="โมเดล 3 มิติของ Jig" class="rounded-lg w-full h-auto object-cover"><p>
+				<video width="320" height="240" controls="controls">
+  					<source src="Run MC 2.mp4" type="video/mp4"><source src="/movie.ogg" type="video/ogg">Your browser does not support the video tag.
+				</video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-bold text-purple-400 mb-8 text-center">Soft Skills Showcase</h3>
+                    <div class="max-w-3xl mx-auto skill-card rounded-lg p-8">
+                        <h4 class="text-xl font-bold text-white mb-4 text-center">เรื่องเล่าจากประสบการณ์: การแก้ปัญหาหน้างาน</h4>
+                        <div class="text-center text-gray-400">
+                            <i class="fas fa-quote-left text-2xl text-purple-400 mr-2"></i>
+                        </div>
+                        <p class="text-gray-300 italic my-4">
+                           "ในโปรเจกต์ออกแบบ Jig ชิ้นหนึ่ง พบว่าเมื่อผลิตออกมาใช้งานจริง มีชิ้นส่วนที่ประกอบไม่พอดีตามแบบ (ปัญหา) ผมจึงได้รวบรวมข้อมูลและปรึกษากับพี่วิศวกรและพี่ช่างหน้างาน (การทำงานเป็นทีม) เพื่อหาสาเหตุ ซึ่งพบว่าเกิดจากความคลาดเคลื่อนในการพับโลหะแผ่น ผมจึงได้นำเสนอแนวทางแก้ไขโดยการปรับแก้ดีไซน์ของ Jig เล็กน้อยให้มีระยะเผื่อมากขึ้น (การแก้ปัญหา) และสื่อสารกับทีมผลิตอีกครั้งเพื่อให้เข้าใจตรงกัน (การสื่อสาร) จนสามารถนำ Jig กลับมาใช้งานและแก้ไขปัญหาได้สำเร็จ"
+                        </p>
+                        <div class="text-right text-gray-400">
+                           <i class="fas fa-quote-right text-2xl text-purple-400 ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Contact -->
+        <section id="contact" class="py-20 bg-gray-800">
+            <div class="container mx-auto px-6 max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">ติดต่อ</h2>
+                <p class="text-gray-400 mb-8">
+                    ผมมีความสนใจที่จะนำความรู้และทักษะมาประยุกต์ใช้และเติบโตในสายงานวิศวกรรม หากคุณมองหาคนรุ่นใหม่ไฟแรงเข้าร่วมทีม สามารถติดต่อผมได้เลยครับ
+                </p>
+    		<ul>
+      			<li>Email : kittikun2544@gmail.com</li>
+    			<li>Telephone : 06 3421 2544</li>
+    		</ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 border-t border-gray-700">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 กิตติคุณ วรนาม. สงวนลิขสิทธิ์.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a, header nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.getAttribute('href').startsWith('#')) {
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
